@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="data.Test" x="202" y="609">
+        <Association destinationClassName="data.AirLine"
+            endpointName="airLineHashMapHashMap" kind="Simple"/>
+        <Association destinationClassName="data.Route"
+            endpointName="routes" kind="Simple"/>
+        <Association destinationClassName="data.City"
+            endpointName="cities" kind="Simple"/>
+        <Association destinationClassName="data.Airport"
+            endpointName="airportHashMap" kind="Simple"/>
+        <Association destinationClassName="data.Country"
+            endpointName="countries" kind="Simple"/>
+        <Communication destinationClassName="data.City"/>
+        <Communication destinationClassName="data.Airport"/>
+        <Communication destinationClassName="data.Country"/>
+        <Communication destinationClassName="data.AirLine"/>
+    </CommunicationClass>
+    <CommunicationClass name="data.City" x="548" y="767">
+        <Association destinationClassName="data.Airport"
+            endpointName="airports" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="presentation.MyService" x="773" y="38">
+        <Association destinationClassName="data.Airport"
+            endpointName="trouveleaveairport" kind="Simple"/>
+        <Association destinationClassName="data.Airport"
+            endpointName="trouveleftairport" kind="Simple"/>
+        <Communication destinationClassName="data.Test">
+            <Point x="680" y="345"/>
+        </Communication>
+        <Communication destinationClassName="data.Airport"/>
+        <Communication destinationClassName="data.AirLine"/>
+    </CommunicationClass>
+    <CommunicationClass name="data.Airport" x="901" y="421"/>
+    <CommunicationClass name="tutoriel.EarthTest" x="1032" y="180">
+        <Communication destinationClassName="data.Airport"/>
+    </CommunicationClass>
+    <CommunicationClass name="data.Country" x="957" y="559">
+        <Association destinationClassName="data.City"
+            endpointName="cities" kind="Simple"/>
+        <Association destinationClassName="data.AirLine"
+            endpointName="airlines" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="presentation.TroisD" x="37" y="512">
+        <Association destinationClassName="tutoriel.EarthTest"
+            endpointName="earthTest" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="data.Route" x="798" y="679"/>
+    <CommunicationClass name="data.AirLine" x="238" y="200"/>
+    <CommunicationClass name="presentation.Myframe" x="32" y="18">
+        <Communication destinationClassName="data.Test"/>
+        <Communication destinationClassName="presentation.MyService"/>
+        <Communication destinationClassName="presentation.TroisD"/>
+    </CommunicationClass>
+</ClassDiagram>

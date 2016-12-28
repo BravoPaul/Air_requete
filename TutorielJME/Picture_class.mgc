@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="data.Test" x="584" y="346">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="data.Route"
+            endpointName="routes" kind="Simple"/>
+        <Association destinationClassName="data.AirLine"
+            endpointName="airLineHashMapHashMap" kind="Simple"/>
+        <Association destinationClassName="data.City"
+            endpointName="cities" kind="Simple"/>
+        <Association destinationClassName="data.Airport"
+            endpointName="airportHashMap" kind="Simple"/>
+        <Association destinationClassName="data.Country"
+            endpointName="countries" kind="Simple"/>
+        <Communication destinationClassName="data.City"/>
+        <Communication destinationClassName="data.Airport"/>
+        <Communication destinationClassName="data.Country"/>
+        <Communication destinationClassName="data.AirLine"/>
+    </Class>
+    <Class name="presentation.MyService" x="681" y="678">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="data.Airport"
+            endpointName="trouveleaveairport" kind="Simple">
+            <Point x="363" y="816"/>
+        </Association>
+        <Association destinationClassName="data.Airport"
+            endpointName="trouveleftairport" kind="Simple"/>
+        <Communication destinationClassName="data.Test"/>
+        <Communication destinationClassName="data.Airport"/>
+        <Communication destinationClassName="data.AirLine"/>
+    </Class>
+    <Class name="data.City" x="266" y="344">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="data.Airport"
+            endpointName="airports" kind="Simple"/>
+    </Class>
+    <Class name="data.Airport" x="78" y="523">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="tutoriel.EarthTest" x="711" y="129">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="data.Airport"/>
+    </Class>
+    <Class name="data.Country" x="511" y="82">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="data.City"
+            endpointName="cities" kind="Simple"/>
+        <Association destinationClassName="data.AirLine"
+            endpointName="airlines" kind="Simple"/>
+    </Class>
+    <Class name="presentation.TroisD" x="810" y="343">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="tutoriel.EarthTest"
+            endpointName="earthTest" kind="Simple"/>
+    </Class>
+    <Class name="data.Route" x="871" y="550">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="data.AirLine" x="69" y="43">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="presentation.Myframe" x="1065" y="134">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="data.Test"/>
+        <Communication destinationClassName="presentation.MyService"/>
+        <Communication destinationClassName="presentation.TroisD"/>
+    </Class>
+</ClassDiagram>
